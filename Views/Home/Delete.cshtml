@@ -1,0 +1,42 @@
+﻿@model UrlCompressorService.Models.UrlEntry
+@{
+    ViewData["Title"] = "Delete";
+}
+<h2>Delete</h2>
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>UrlEntry</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LongUrl)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.LongUrl)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ShortUrl)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ShortUrl)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.RedirectCount)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.RedirectCount)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.CreationDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.CreationDate)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="ID" />
+        <input type="submit" value="Delete" class="btn btn-default" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>
